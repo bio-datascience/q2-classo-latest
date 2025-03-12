@@ -27,3 +27,4 @@ example/rename-fastqs.ipynb
 tutorial/qiime2-protocol.ipynb
 q2_classo/test_classo.py
 
+example/data/*

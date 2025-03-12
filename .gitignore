@@ -1,15 +1,29 @@
-/.ipynb_checkpoints/
-Dockerfile
-*.xml
-.DS_Store
+# Ignore IDE and editor files
 .idea/
+
+# Ignore build and distribution files
 dist/
-example/.DS_Store
+build/
 q2_classo.egg-info/
+
+# Ignore Python bytecode files and caches
+__pycache__/
 q2_classo/__pycache__/
-q2_classo/.DS_Store
-tutorial/qiime2-protocol.ipynb
-build/*
+q2_classo/_summarize/__pycache__/
+q2_classo/_summarize/__pycache__/_visualizer.cpython-38.pyc
+
+# Ignore Jupyter notebook checkpoint files
 example/.ipynb_checkpoints/
+example/data/.ipynb_checkpoints/
+example/data/atacama/.ipynb_checkpoints/
+q2_classo/.ipynb_checkpoints/
+q2_classo/_summarize/.ipynb_checkpoints/
+
+# Ignore macOS system files
+*.DS_Store
+
+# Ignore specific files related to examples and tutorials
 example/rename-fastqs.ipynb
+tutorial/qiime2-protocol.ipynb
 q2_classo/test_classo.py
+

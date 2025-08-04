@@ -1,30 +1,27 @@
-# Ignore IDE and editor files
+# IDE and Editor Files
 .idea/
 
-# Ignore build and distribution files
+# Build and Distribution Files
 dist/
 build/
 q2_classo.egg-info/
 
-# Ignore Python bytecode files and caches
+# Python Files
 __pycache__/
-q2_classo/__pycache__/
-q2_classo/_summarize/__pycache__/
-q2_classo/_summarize/__pycache__/_visualizer.cpython-38.pyc
+*.pyc
+*.pyo
+*.pyd
 
-# Ignore Jupyter notebook checkpoint files
-example/.ipynb_checkpoints/
-example/data/.ipynb_checkpoints/
-example/data/atacama/.ipynb_checkpoints/
-q2_classo/.ipynb_checkpoints/
-q2_classo/_summarize/.ipynb_checkpoints/
+# Jupyter Notebook Files
+.ipynb_checkpoints/
 
-# Ignore macOS system files
-*.DS_Store
+# macOS System Files
+.DS_Store
 
-# Ignore specific files related to examples and tutorials
+# Example and Tutorial Files
+example/
 example/rename-fastqs.ipynb
-tutorial/qiime2-protocol.ipynb
-q2_classo/test_classo.py
+tutorial/
 
-example/data/*
+# Test Files
+q2_classo/test_classo.py

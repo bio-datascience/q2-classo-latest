@@ -20,7 +20,6 @@ __pycache__/
 
 # Example and Tutorial Files
 example/
-example/rename-fastqs.ipynb
 tutorial/
 
 # Test Files

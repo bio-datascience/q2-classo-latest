@@ -779,8 +779,9 @@ def plot_predict_path(
 
 def make_dico_prediction(yhat,y,classification):
     dic = {}
-    newy = y.loc[yhat.index & y.index].values[:,0]
-    newyhat = yhat.loc[yhat.index & y.index].values[:,0]
+    common_indices = yhat.index.intersection(y.index)
+    newy = y.loc[common_indices].values[:,0]
+    newyhat = yhat.loc[common_indices].values[:,0]
     dic["samples"] = len(newy)
     
 

@@ -17,6 +17,7 @@ __pycache__/
 
 # macOS System Files
 .DS_Store
+.dockerignore
 
 # Example and Tutorial Files
 example/

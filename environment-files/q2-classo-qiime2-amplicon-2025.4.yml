@@ -14,5 +14,5 @@ dependencies:
   - jupyter
   - plotly
   - pip
-  pip:
+  - pip:
     - git+https://github.com/Leo-Simpson/c-lasso.git@master

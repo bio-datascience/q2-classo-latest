@@ -11,7 +11,6 @@
 - Tree-aggregated predictive modeling
 - Interactive visualizations with model diagnostics
 
-📚 [Documentation](https://github.com/Vlasovets/q2-classo) |
 📂 [Tutorial & Examples](https://github.com/Vlasovets/q2-hdstats-docs)
 
 ---

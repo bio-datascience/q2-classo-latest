@@ -114,12 +114,12 @@ def build_context(output_dir, problem, predictions, taxa, max_number):
 
     if dico["with_tree"]:
         fig = plot_tree(taxa, labels)
-        offline.plot(
-            fig,
-            filename=os.path.join(output_dir, "tree.html"),
-            auto_open=False,
-            image='svg'
-        )
+        # offline.plot(
+        #     fig,
+        #     filename=os.path.join(output_dir, "tree.html"),
+        #     auto_open=False,
+        #     image='svg'
+        # )
 
     context["dico"] = dico
     dico_ms = problem["model_selection"].attrs.asdict()
@@ -291,11 +291,11 @@ def build_context(output_dir, problem, predictions, taxa, max_number):
             fig = plot_tree(
                 taxa, labels, selected_labels=labels[selected_param]
             )
-            offline.plot(
-                fig,
-                filename=os.path.join(output_dir, "StabSel-tree.html"),
-                auto_open=False, image='svg'
-            )
+            # offline.plot(
+            #     fig,
+            #     filename=os.path.join(output_dir, "StabSel-tree.html"),
+            #     auto_open=False, image='svg'
+            # )
 
         dico_stabsel["nsel"] = len(stability_support)
         dico_stabsel["htmlstab"] = q2templates.df_to_html(
@@ -508,7 +508,7 @@ def plot_path(BETAS, SIGMAS, LAMBDAS, directory, labels, name1, name2, logscale=
             )
     fig.update_xaxes(title_text=textlam)
     fig.update_yaxes(title_text=r"Coefficients beta_i ")
-    offline.plot(fig, filename=os.path.join(directory, name1), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name1), auto_open=False, image='svg')
 
     if SIGMAS is not None:
         fig2 = graph_objects.Figure(
@@ -519,9 +519,9 @@ def plot_path(BETAS, SIGMAS, LAMBDAS, directory, labels, name1, name2, logscale=
         )
         fig2.update_xaxes(title_text=textlam)
         fig2.update_yaxes(title_text=r"Scale sigma ")
-        offline.plot(
-            fig2, filename=os.path.join(directory, name2), auto_open=False, image='svg'
-        )
+        # offline.plot(
+        #     fig2, filename=os.path.join(directory, name2), auto_open=False, image='svg'
+        # )
 
 
 def plot_beta(beta, directory, labels, name, title, max_number):
@@ -543,7 +543,7 @@ def plot_beta(beta, directory, labels, name, title, max_number):
         data, x="index", y="Coefficient i of beta", hover_data=["label"]
     )
     fig.update_layout(title=title)
-    offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
 
 
 def plot_cv(lam, accuracy, index_1SE, index_min, SE, directory, name, logscale=True, classification=False):
@@ -612,7 +612,7 @@ def plot_cv(lam, accuracy, index_1SE, index_min, SE, directory, name, logscale=T
     else:
         fig.update_yaxes(title_text="Mean-Squared Error (MSE)")
 
-    offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
 
 
 def plot_stability(
@@ -661,7 +661,7 @@ def plot_stability(
             )
         ]
     )
-    offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
 
 
 def plot_stability_path(
@@ -710,7 +710,7 @@ def plot_stability_path(
             )
         ],
     )
-    offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
 
 
 def plot_predict(yhat, y, train_labels, directory, name, title):
@@ -731,7 +731,7 @@ def plot_predict(yhat, y, train_labels, directory, name, title):
     )
 
     fig.update_layout(title=title, plot_bgcolor='white')
-    offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
 
 
 def plot_predict_path(
@@ -775,7 +775,7 @@ def plot_predict_path(
         fig.update_yaxes(title_text=r"Misclassification number")
     else:
         fig.update_yaxes(title_text=r"L2 error")
-    offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
+    # offline.plot(fig, filename=os.path.join(directory, name), auto_open=False, image='svg')
 
 def make_dico_prediction(yhat,y,classification):
     dic = {}
